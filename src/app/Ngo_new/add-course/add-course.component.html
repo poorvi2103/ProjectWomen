@@ -1,5 +1,4 @@
 
-<p>add-course works!</p>
 <div class="container-fluid" id="registration-step">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2">
@@ -46,88 +45,64 @@
                     <p class="text-center red-text">All fields marked with * are mandatory</p>
                     <table class="table table-striped table-condensed">
                         <tbody class="md-form">
-                            
                             <tr>
                                 <th>Course Provided <span class="text-danger">*</span></th>
-                                <td class="form-group" [class.has-error]="coursename.invalid && coursename.touched"
-                                    [class.text-success]="coursename.valid">
-                                    <select name="coursename" [(ngModel)]="course.courseName" class="form-control"
-                                        #coursename="ngModel" autofocus required>
+                                <td class="form-group" >
+                                    <select name="courseName" class="form-control"
+                                         autofocus ngModel>
                                         <option value="agriculture">Agriculture</option>
                                         <option value="tailoring">Tailoring</option>
                                         <option value="stiching">Stiching</option>
                                     </select>
-                                    <span class="help-block red-text"
-                                        *ngIf="coursename.invalid && coursename.touched">Course type is
-                                        required</span>
+                                    
                                 </td>
                             </tr>
                             <tr>
                                 <th>Duration (in months) <span class="text-danger">*</span></th>
-                                <td class="form-group" [class.has-error]="duration.invalid && duration.touched"
-                                    [class.text-success]="duration.valid">
-                                    <input [(ngModel)]="course.duration" type="text" class="form-control"
-                                        placeholder="Enter Duration(in months)" name="duration"
-                                         #duration="ngModel" required>
-                                    <span class="help-block red-text"
-                                        *ngIf="duration.invalid && duration.touched">Duration is
-                                        required</span>
+                                <td class="form-group" >
+                                    <input  type="text" class="form-control"
+                                        placeholder="Enter Duration(in months)" name="duration"ngModel>
+                                
                                 </td>
                             </tr>
                             <tr>
                                 <th>Description <span class="text-danger">*</span></th>
-                                <td class="form-group" [class.has-error]="description.invalid && description.touched"
-                                    [class.text-success]="description.valid">
-                                    <textarea [(ngModel)]="course.description" type="text" class="form-control"
-                                        name="description" placeholder="Enter Description of Course" #description="ngModel"
-                                        required></textarea>
-                                    <span class="help-block red-text"
-                                        *ngIf="description.invalid && description.touched">Description is
-                                        required</span>
-                                </td>
+                                <td class="form-group" >
+                                    <textarea type="text" class="form-control"
+                                        name="description" placeholder="Enter Description of Course" 
+                                        ngModel></textarea>
+                                  
                             </tr>
                             <tr>
                                 <th>NGO Name <span class="text-danger">*</span></th>
-                                <td class="form-group" [class.has-error]="ngoName.invalid && ngoName.touched"
-                                [class.text-success]="ngoName.valid">
-                                    <input [(ngModel)]="course.ngoName" type="text" class="form-control"
-                                        placeholder="Name of NGO" name="ngoName" #ngoName="ngModel" required>
-                                    <span class="help-block red-text"
-                                        *ngIf="ngoName.invalid && ngoName.touched">NGO name is
-                                        required</span>
+                                <td class="form-group" >
+                                    <input  type="text" class="form-control"
+                                        placeholder="Name of NGO" name="ngoName" ngModel>
+                                   
                                 </td>
                             </tr>
                             <tr>
                                 <th>Location <span class="text-danger">*</span></th>
-                                <td class="form-group" [class.has-error]="location.invalid && location.touched"
-                                [class.text-success]="location.valid">
-                                    <input [(ngModel)]="course.location" type="text" class="form-control"
-                                        placeholder="Enter the location" name="location" #location="ngModel" required>
-                                    <span class="help-block red-text"
-                                        *ngIf="location.invalid && location.touched">Location is
-                                        required</span>
+                                <td class="form-group">
+                                    <input  type="text" class="form-control"
+                                        placeholder="Enter the location" name="location" ngModel>
+                                   
                                 </td>
                             </tr>
                             <tr>
                                 <th>Start Date <span class="text-danger">*</span></th>
-                                <td class="form-group" [class.has-error]="start_Date.invalid && start_Date.touched"
-                                [class.text-success]="start_Date.valid">
-                                    <input [(ngModel)]="course.start_Date" type="date" class="form-control"
-                                        placeholder="Enter the Start Date of the course" name="start_Date" #start_Date="ngModel" required>
-                                    <span class="help-block red-text"
-                                        *ngIf="start_Date.invalid && start_Date.touched">Start Date is
-                                        required</span>
+                                <td class="form-group" >
+                                    <input  type="date" class="form-control"
+                                        placeholder="Enter the Start Date of the course" name="start_Date" ngModel>
+                                   
                                 </td>
                             </tr>
                             <tr>
                                 <th>End Date <span class="text-danger">*</span></th>
-                                <td class="form-group" [class.has-error]="end_Date.invalid && end_Date.touched"
-                                [class.text-success]="end_Date.valid">
-                                    <input [(ngModel)]="course.end_Date" type="date" class="form-control"
-                                        placeholder="Enter the End Date of the course" name="end_Date" #end_Date="ngModel" required>
-                                    <span class="help-block red-text"
-                                        *ngIf="end_Date.invalid && end_Date.touched">End Date is
-                                        required</span>
+                                <td class="form-group" >
+                                    <input type="date" class="form-control"
+                                        placeholder="Enter the End Date of the course" name="end_Date" ngModel>
+                                    
                                 </td>
                             </tr>
                         </tbody>
