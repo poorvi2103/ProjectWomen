@@ -10,7 +10,7 @@ import { CourseService } from 'src/app/Services/course.service';
 })
 export class AddCourseComponent implements OnInit {
 
-  course!: Course;
+  course: Course;
   constructor(private _service : CourseService,private router:Router) { }
 
   ngOnInit(): void {
@@ -18,19 +18,11 @@ export class AddCourseComponent implements OnInit {
   add(mform:any)
   {
     let body = mform.value;
-    this._service.AddCourse(body).subscribe((res) =>
-    {
-      if(res.status == 200) 
-      {
-        console.log(res);
-        alert("login sucess")
-        //this.router.navigateByUrl("/admindash");
+   
+      this._service.AddCourse(body).subscribe(data=>console.log(body));
+      this.router.navigateByUrl("ngoaflogin");
+       
       }
-    },(err)=>{
-      alert("There was problem logging you out");
-      console.log(err);
-    //  this.router.navigateByUrl("userlist");
-    });
-  }
+   
 
 }

@@ -9,7 +9,7 @@ import { Course } from '../Models/Course';
 export class CourseService {
 
   httpOptions = { headers: new HttpHeaders({ 'Content-type': 'application/json' }) };
-  url:string="http://localhost:32377/api/Courses";
+  url:string="http://localhost:32377/api/Course";
 
   constructor(private http:HttpClient) { }
   getCourse():Observable<any>
